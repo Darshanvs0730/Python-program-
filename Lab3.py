@@ -1,41 +1,23 @@
-n = int(input("Enter the value of n: "))
-
-a = 0
-
-b = 1
-
-count = 0
-
-if n <= 0:
-
-print("Please enter a valid integer")
-
-elif n == 1:
-
-print("Fibonacci series upto 1")
-
-print(a)
-
-else:
-print("Fibonacci Sequence")
-
-while (count < n):
-
-print(a, end = " ")
-
-c = a + b
-
-# Updating the values of a and b by swapping
-
-a = b
-
-b = c
-
-count += 1
-
-Enter the value of n: 15
-
-Fibonacci Sequence
-
-0 1 1 2 3 5 8 13 21 34 55 89 144 233 377
-
+#Mean,Variance and standard deviation 
+ n = int(input("Enter the number students: ")) 
+ list1 = [] 
+ for i in range(n): 
+ marks = int(input("Enter marks of each student in python: ")) 
+ list1.append(marks) 
+ print("List containing marks of student: ", list1) 
+ print("-"*50) 
+ # Finding Mean 
+ sum = 0 # Initialize 
+ for i in list1: 
+ sum += i 
+ print("Sum of all the elements in the list: ", sum) 
+ x_bar = sum/len(list1) 
+ print("Mean: ", x_bar) 
+ # Finding Variance 
+ var = 0 # Initialize 
+ for i in list1: 
+ var = var + ((i - x_bar)**2)/len(list1) 
+ print("Variance: ", var) 
+ # Finding Standard Deviation 
+ std_dev = var**0.5 
+ print("Standard Deviation: ", std_dev)
